@@ -12,12 +12,10 @@ vim.opt.incsearch = true
 vim.opt.termguicolors = true
 vim.opt.ignorecase = true
 vim.opt.wrap = false
+vim.opt.showtabline = 0
 vim.opt.laststatus = 0
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "no"
 vim.opt.updatetime = 50
 vim.opt.mouse = ""
-
-vim.cmd("colorscheme tokyonight")
-
-
+vim.cmd.colorscheme("habamax")

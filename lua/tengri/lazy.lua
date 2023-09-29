@@ -13,18 +13,11 @@ vim.opt.rtp:prepend(lazypath)
 
 
 require("lazy").setup({
-	{
-		"folke/tokyonight.nvim",
-		lazy = false,
-		priority = 1000,
-		opts = {},
-	},
 	{ "folke/neodev.nvim", opts = {} },
 	{
 		"neovim/nvim-lspconfig",
 		"williamboman/mason-lspconfig.nvim",
 		"williamboman/mason.nvim",
-		'simrat39/rust-tools.nvim',
 		'hrsh7th/cmp-nvim-lsp',
 		'hrsh7th/cmp-buffer',
 		'hrsh7th/cmp-path',
@@ -34,19 +27,12 @@ require("lazy").setup({
 		'saadparwaiz1/cmp_luasnip'
 	},
 	{
-		"sainnhe/sonokai",
-		priority = 1000,
-		lazy = false,
-		config = function()
-			vim.g.sonokai_transparent_background = 1
-		end
-	},
-	{
 		'm4xshen/autoclose.nvim',
 		config = function()
 			require("autoclose").setup()
 		end
 	},
+	"xiyaowong/transparent.nvim",
 	{
 		'numToStr/Comment.nvim',
 		config = function()

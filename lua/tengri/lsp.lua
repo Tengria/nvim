@@ -10,14 +10,9 @@ require("mason-lspconfig").setup_handlers {
 	function (server_name) -- default handler (optional)
 		require("lspconfig")[server_name].setup {}
 	end,
-	["rust_analyzer"] = function ()
-		require("rust-tools").setup {
-			capabilities = capabilities
-		}
-	end,
 }
 
-vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
+vim.keymap.set('n', 'gl', vim.diagnostic.open_float)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
 vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist)
@@ -70,6 +65,7 @@ cmp.setup({
 		{ name = 'luasnip' },
 	}, {
 		{ name = 'buffer' },
+		{ name = 'path' }
 	})
 })
 
